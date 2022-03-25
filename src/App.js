@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import './App.css';
+import Cart from './components/Cart/Cart';
 import Laptop from './components/Laptop/Laptop';
 
 function App() {
@@ -14,6 +16,13 @@ function App() {
     {id: 9, image: 'http://surl.li/bprbh', name: 'Samsung-Sens', price: 70000},
   ];
 
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (laptop) => {    
+    const newCart = [...cart, laptop];
+    setCart(newCart);
+  }
+
   
 
   return ( 
@@ -23,12 +32,20 @@ function App() {
       <div className = "main-container" >
         <div className='laptop-container'>
         {
-          laptops.map(laptop => <Laptop key={laptop.id} laptop={laptop}></Laptop>)
+          laptops.map(laptop => <Laptop key={laptop.id} laptop={laptop} addToCart={addToCart}></Laptop>)
         }
         </div>
         <div className='cart-container'>
           <div>
             <h3>Selected Laptop</h3>
+            
+              {
+                cart.map(item => {
+                  return <Cart key={item.id} item={item}></Cart>
+                }
+                )} 
+            
+            
           </div>
         </div>
       </div>
