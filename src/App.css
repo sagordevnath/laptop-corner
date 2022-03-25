@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+.main-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+
+  
+  
+}
+
+.laptop-container{
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    margin: 50px;
+}
+.laptop-container img {
+  width: 100%;
+  height: 250px;
+}
+
+.cart-container {
+  width: 100%;
+  background-color: aquamarine;
+  padding: 20px;
+  margin: 10px 0;
+  position: sticky;
+  top: 0;
+}
