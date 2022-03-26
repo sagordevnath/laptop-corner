@@ -5,6 +5,8 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const Cart = ({item}) => {
     const {image, name} = item;
+
+   
     return (
         <div className='cart-item'>
             <img src={image} alt='' />            

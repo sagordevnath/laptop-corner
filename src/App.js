@@ -13,7 +13,7 @@ function App() {
     {id: 2, image: 'http://surl.li/bptnl', name: 'Lenovo-Yoga', price: 85000},
     {id: 3, image: 'http://surl.li/bptnr', name: 'HP-Ellitebook', price: 62000},
     {id: 4, image: 'http://surl.li/bptoc', name: 'Dell-inspiron', price: 55000},
-    {id: 5, image: 'http://surl.li/bptol', name: 'Asus-Expertbook', price: 43000},
+    {id: 5, image: 'http://surl.li/bpuqe', name: 'Asus-Expertbook', price: 43000},
     {id: 6, image: 'http://surl.li/bptoq', name: 'Acer-Ferrari', price: 52000},
     {id: 7, image: 'http://surl.li/bptos', name: 'Walton-Passion', price: 30000},
     {id: 8, image: 'http://surl.li/bptot', name: 'Fujitsu-Lifebook', price: 49000},
@@ -22,10 +22,11 @@ function App() {
 
   const [cart, setCart] = useState([]);  
 
-  const addToCart = (laptop) => {        
+  const addToCart = (laptop) => {    
     const newCart = [...cart, laptop];
     setCart(newCart);
-  }
+  };
+  
   // show 1 random item in cart
   const handleChooseOne = () => {
     // random select
