@@ -3,7 +3,7 @@ import React from 'react';
 const Cart = ({item}) => {
     const {image, name, price} = item;
     return (
-        <div>
+        <div id='ffff'>
             {/* <img src={image} alt='' />             */}
             <h4>Name: {name}</h4>
             {/* <p>Price: {price}</p>                */}

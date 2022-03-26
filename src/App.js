@@ -24,7 +24,16 @@ function App() {
   }
 
   const handleChooseOne = () => {
-    console.log('first');
+    chooseAgain();
+    const selectedLaptop = cart[Math.floor(Math.random())];
+    addToCart(selectedLaptop);
+  }
+
+  const chooseAgain = () => {    
+    // cart = [];
+    // setCart(cart);
+    setCart([]);
+    // document.getElementById('ffff').innerHTML = '';
   }
 
   
@@ -45,12 +54,11 @@ function App() {
             
               {
                 cart.map(item => {
-                  return <Cart key={item.id} item={item} handleChooseOne={handleChooseOne}></Cart>
-                }
-                )} 
+                  return <Cart key={item.id} item={item} handleChooseOne={handleChooseOne} chooseAgain={chooseAgain}></Cart>
+                })
+              } 
             <button onClick={()=>handleChooseOne()}>Choose 1 for me</button>
-            <button>Choose again</button>
-            
+            <button onClick={()=>chooseAgain()}>Choose again</button>            
             
           </div>
         </div>
