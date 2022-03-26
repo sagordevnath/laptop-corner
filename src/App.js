@@ -22,7 +22,14 @@ function App() {
 
   const [cart, setCart] = useState([]);  
 
-  const addToCart = (laptop) => {    
+  // show all items in cart
+  const addToCart = (laptop) => {
+    if (cart.find(item => item.id === laptop.id)) {
+      return alert('Item already added to cart');
+    } 
+    if (cart.length >= 4) {
+      return alert('You can only add 4 items to cart');
+    }  
     const newCart = [...cart, laptop];
     setCart(newCart);
   };
@@ -32,17 +39,19 @@ function App() {
     // random select
     const random = Math.floor(Math.random() * (4 - 1)) + 0;
     const newCart = [cart[random]];
-    setCart(newCart);
-    
-
-    
+    setCart(newCart);    
   }
 
-  const chooseAgain = () => {    
-    // cart = [];
-    // setCart(cart);
+  // handle choose again button
+  const chooseAgain = () => {       
     setCart([]);
-    // document.getElementById('ffff').innerHTML = '';
+
+  }
+
+  // handle delete button
+  const handleDelete = (id) => {    
+    const newCart = cart.filter(item => item.id !== id);
+    setCart(newCart);
   }
 
   
@@ -62,7 +71,7 @@ function App() {
             
               {
                 cart.map(item => {
-                  return <Cart key={item.id} item={item} handleChooseOne={handleChooseOne} chooseAgain={chooseAgain}></Cart>
+                  return <Cart key={item.id} item={item} handleChooseOne={handleChooseOne} chooseAgain={chooseAgain} handleDelete={handleDelete}></Cart>
                 })
               }   
                          

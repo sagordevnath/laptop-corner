@@ -28,8 +28,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-    /* font-size: 17px;     */
-    /* padding: 5px; */
+    
 }
 .btn:hover {
     background-color: #27812c;
