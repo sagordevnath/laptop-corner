@@ -16,17 +16,21 @@ function App() {
     {id: 9, image: 'http://surl.li/bprbh', name: 'Samsung-Sens', price: 70000},
   ];
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState([]);  
 
-  const addToCart = (laptop) => {    
+  const addToCart = (laptop) => {        
     const newCart = [...cart, laptop];
     setCart(newCart);
   }
-
+  // show 1 random item in cart
   const handleChooseOne = () => {
-    chooseAgain();
-    const selectedLaptop = cart[Math.floor(Math.random())];
-    addToCart(selectedLaptop);
+    // random select
+    const random = Math.floor(Math.random() * (4 - 1)) + 0;
+    const newCart = [cart[random]];
+    setCart(newCart);
+    
+
+    
   }
 
   const chooseAgain = () => {    
@@ -56,9 +60,11 @@ function App() {
                 cart.map(item => {
                   return <Cart key={item.id} item={item} handleChooseOne={handleChooseOne} chooseAgain={chooseAgain}></Cart>
                 })
-              } 
+              }   
+                         
             <button onClick={()=>handleChooseOne()}>Choose 1 for me</button>
-            <button onClick={()=>chooseAgain()}>Choose again</button>            
+            <button onClick={()=>chooseAgain()}>Choose again</button>  
+                    
             
           </div>
         </div>
