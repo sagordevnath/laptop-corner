@@ -39,8 +39,7 @@
 .main-container {
   display: grid;
   grid-template-columns: 4fr 1fr;
-
-  
+  background-color: chocolate;  
   
 }
 

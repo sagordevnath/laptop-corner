@@ -23,6 +23,10 @@ function App() {
     setCart(newCart);
   }
 
+  const handleChooseOne = () => {
+    console.log('first');
+  }
+
   
 
   return ( 
@@ -35,15 +39,17 @@ function App() {
           laptops.map(laptop => <Laptop key={laptop.id} laptop={laptop} addToCart={addToCart}></Laptop>)
         }
         </div>
-        <div className='cart-container'>
-          <div>
+        <div>
+          <div className='cart-container'>
             <h3>Selected Laptop</h3>
             
               {
                 cart.map(item => {
-                  return <Cart key={item.id} item={item}></Cart>
+                  return <Cart key={item.id} item={item} handleChooseOne={handleChooseOne}></Cart>
                 }
                 )} 
+            <button onClick={()=>handleChooseOne()}>Choose 1 for me</button>
+            <button>Choose again</button>
             
             
           </div>

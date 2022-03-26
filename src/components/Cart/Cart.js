@@ -6,7 +6,8 @@ const Cart = ({item}) => {
         <div>
             {/* <img src={image} alt='' />             */}
             <h4>Name: {name}</h4>
-            {/* <p>Price: {price}</p>                 */}
+            {/* <p>Price: {price}</p>                */}
+            
             
         </div>
     );
