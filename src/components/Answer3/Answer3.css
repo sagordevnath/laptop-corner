@@ -1,0 +1,16 @@
+.answer-3 {
+    width: 90%;
+    height: 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(210, 252, 205);
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}

@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import './App.css';
+import Answer1 from './components/Answer1/Answer1';
+import Answer2 from './components/Answer2/Answer2';
+import Answer3 from './components/Answer3/Answer3';
 import Cart from './components/Cart/Cart';
 import Header from './components/Header/Header';
 import Laptop from './components/Laptop/Laptop';
@@ -69,7 +72,13 @@ function App() {
           </div>
         </div>
       </div>
+      <div className='answer'>
+        <Answer1></Answer1>
+        <Answer2></Answer2>
+        <Answer3></Answer3>
+      </div>
     </div>
+    
   );
 }
 
