@@ -39,15 +39,15 @@
 .main-container {
   display: grid;
   grid-template-columns: 4fr 1fr;
-  background-color: chocolate;  
+  background-color: rgb(255, 255, 255);  
   
 }
 
 .laptop-container{
   display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin: 10px;
+    gap: 30px;
+    margin: 10px 20px;
 }
 .laptop-container img {
   width: 100%;
@@ -55,11 +55,44 @@
 }
 
 .cart-container {  
-  background-color: aquamarine;
+  background-color: rgb(210, 252, 205);
   padding: 20px;
   margin: 10px 0;
   position: sticky;
   top: 0;
   margin-right: 10px;
   height: 500px;
+  border-radius: 15px;
+}
+
+.btn-choose-one {
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 0;
+}
+.btn-choose-one:hover {
+  background-color: #27812c;
+  color: #fff;
+  transition: 0.7s;
+}
+
+.btn-choose-again {
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+ 
+}
+.btn-choose-again:hover {
+  background-color: #27812c;
+  color: #fff;
+  transition: 0.7s;
 }

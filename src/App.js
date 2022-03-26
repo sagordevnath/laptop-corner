@@ -1,19 +1,20 @@
 import { useState } from 'react';
 import './App.css';
 import Cart from './components/Cart/Cart';
+import Header from './components/Header/Header';
 import Laptop from './components/Laptop/Laptop';
 
 function App() {
   const laptops = [
-    {id: 1, image: 'http://surl.li/bprbh', name: 'Apple-Macbook', price: 100000},
-    {id: 2, image: 'http://surl.li/bprbh', name: 'Lenovo-Yoga', price: 85000},
-    {id: 3, image: 'http://surl.li/bprbh', name: 'HP-Ellitebook', price: 62000},
-    {id: 4, image: 'http://surl.li/bprbh', name: 'Dell-inspiron', price: 55000},
-    {id: 5, image: 'http://surl.li/bprbh', name: 'Asus-Expertbook', price: 43000},
-    {id: 6, image: 'http://surl.li/bprbh', name: 'Acer-Ferrari', price: 52000},
-    {id: 7, image: 'http://surl.li/bprbh', name: 'Walton-Passion', price: 30000},
-    {id: 8, image: 'http://surl.li/bprbh', name: 'Fujitsu-Lifebook', price: 49000},
-    {id: 9, image: 'http://surl.li/bprbh', name: 'Samsung-Sens', price: 70000},
+    {id: 1, image: 'http://surl.li/bptmx', name: 'Apple-Macbook', price: 100000},
+    {id: 2, image: 'http://surl.li/bptnl', name: 'Lenovo-Yoga', price: 85000},
+    {id: 3, image: 'http://surl.li/bptnr', name: 'HP-Ellitebook', price: 62000},
+    {id: 4, image: 'http://surl.li/bptoc', name: 'Dell-inspiron', price: 55000},
+    {id: 5, image: 'http://surl.li/bptol', name: 'Asus-Expertbook', price: 43000},
+    {id: 6, image: 'http://surl.li/bptoq', name: 'Acer-Ferrari', price: 52000},
+    {id: 7, image: 'http://surl.li/bptos', name: 'Walton-Passion', price: 30000},
+    {id: 8, image: 'http://surl.li/bptot', name: 'Fujitsu-Lifebook', price: 49000},
+    {id: 9, image: 'http://surl.li/bptpa', name: 'Samsung-Sens', price: 70000},
   ];
 
   const [cart, setCart] = useState([]);  
@@ -44,8 +45,7 @@ function App() {
 
   return ( 
     <div className='App'>
-      <h1> Laptop Corner </h1> 
-      <h3>Choose your favorite Laptop</h3>
+      <Header></Header>
       <div className = "main-container" >
         <div className='laptop-container'>
         {
@@ -62,8 +62,8 @@ function App() {
                 })
               }   
                          
-            <button onClick={()=>handleChooseOne()}>Choose 1 for me</button>
-            <button onClick={()=>chooseAgain()}>Choose again</button>  
+            <button className='btn-choose-one' onClick={()=>handleChooseOne()}>Choose 1 for me</button>
+            <button className='btn-choose-again' onClick={()=>chooseAgain()}>Choose again</button>  
                     
             
           </div>

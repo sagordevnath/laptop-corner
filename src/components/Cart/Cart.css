@@ -1,15 +1,18 @@
 .cart-item {
     display: flex;    
     align-items: center;    
-    margin: 10px;
+    margin: 5px;
     /* border: 2px solid black; */
     background-color: aliceblue;
     padding: 0 10px;
-
 
 }
 .cart-item img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+.cart-item h6 {
+    margin: 0 20px;
 }

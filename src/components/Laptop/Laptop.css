@@ -4,13 +4,16 @@
     border: 1px solid #95A0A7;
     border-radius: 8px;
     position: relative;
-    background-color: aquamarine;
+    background-color: rgb(210, 252, 205);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
 }
 .laptop-info img {
     width: 286px;
     height: 286px;
     border-radius: 8px;
     margin: 7px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .btn {
@@ -23,15 +26,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 17px;    
-    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    /* font-size: 17px;     */
+    /* padding: 5px; */
 }
 .btn:hover {
-    background-color: #00ff0d;
-    color: black;
+    background-color: #27812c;
+    color: rgb(255, 255, 255);
+    transition: 0.7s;
 }
-.btn icon {
-    margin-left: 10px;
+.btn h4 {
+    margin-right: 10px;
 }
 @media screen and (max-width:1100px) {
     .products-container{
